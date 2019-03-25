@@ -1,0 +1,13 @@
+img {
+    width: 400px;
+    height: 400px;
+}
+
+.yellowbox {
+    box-sizing: border-box;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    background-color: rgba(250,250,0,0.5);
+    top: 8px;
+}
