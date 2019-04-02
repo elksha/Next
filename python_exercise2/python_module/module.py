@@ -13,4 +13,6 @@ class FourCal:
         return result
     def div(self):
         result = self.first / self.second
+        if self.second == 0:
+            result = "Can't divide by zero"
         return result
