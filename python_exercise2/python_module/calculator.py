@@ -15,12 +15,16 @@ def hello():
     b.second = int(input("num2:"))
     if a == 1:
         print(b.add())
+        hello()
     elif a == 2:
         print(b.sub())
+        hello()
     elif a == 3:
         print(b.mul())
+        hello()
     elif a == 4:
         print(b.div())
+        hello()
     elif a == 5:
         pass
     else:
