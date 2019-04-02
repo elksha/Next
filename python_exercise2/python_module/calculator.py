@@ -1,6 +1,7 @@
 from module import *
 
 def hello():
+  try:
     a = input("""
   Menu
 --------
@@ -10,9 +11,6 @@ def hello():
  4: divide
  5: stop
 : """)
-    if type(a) != int:
-        print("값을 제대로 입력해주세요.")
-        hello()
     if int(a) == 5:
         exit()
     if int(a) != 1 and int(a) != 2 and int(a) != 3 and int(a) != 4 and int(a) != 5:
@@ -33,5 +31,8 @@ def hello():
     elif int(a) == 4:
         print(b.div())
         hello()
+  except ValueError:
+    print("값을 제대로 입력해주세요.")
+    hello()
 
 hello()
