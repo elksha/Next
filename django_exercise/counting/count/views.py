@@ -24,7 +24,7 @@ def result(request):
         dummy.append(const)
         const+=1
     for i in dummy:
-        final.append(word[i]+':'+str(count[i]))
+        final.append(word[i]+': '+str(count[i]))
     return render(request, 'result.html', {
         'text':text,
         'textcount':textcount,
