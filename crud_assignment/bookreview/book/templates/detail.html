@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>책 이름 : {{ post.title }}</h2>
+    <h5>리뷰 내용 : {{ post.review }}</h5>
+    <h5>가격 : {{ post.price }}</h5>
+    <h5>점수 : {{ post.score }}</h5>
+    <a href="{% url 'home' %}">글 목록으로 돌아가기</a>
+</body>
+</html>
