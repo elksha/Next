@@ -10,5 +10,7 @@
     <h2>{{ post.title }}</h2>
     <h5>{{ post.contents }}</h5>
     <a href="{% url 'home' %}">글 목록으로 돌아가기</a>
+    <a href="{% url 'edit' post.pk %}">수정하기</a>
+    <a href="{% url 'delete' post.pk %}">지워버리기</a>
 </body>
 </html>

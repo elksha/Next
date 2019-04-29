@@ -1,3 +1,4 @@
+{% extends 'home.html' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +8,12 @@
     <title>Document</title>
 </head>
 <body>
+    {% block content %}
     <h1>새 리뷰남기기</h1>
     <form method="POST">{% csrf_token %}
         {{ form.as_p }}
         <button type="submit">남기기</button>
     </form>
+    {% endblock %}
 </body>
 </html>

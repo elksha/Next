@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'NanumGothic';
+    src: url(NanumGothic.ttf) format('truetype');
+    font-family: 'Daehan';
+    src: url(대한뉴스L.otf) format('opentype');
+    font-family: 'KCC';
+    src: url(KCC-eunyoung.ttf) format('truetype');
+}
+
+.salut {
+    font-family: 'Daehan';
+    color: white;
+    background-image: url('TunedIn_BooksfromtheBanner_large.jpg');
+    text-align: center;
+    height: 230px;
+    margin-top: 0;
+}
+
+.next {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.226);
+    font-family: 'NanumGothic';
+    text-align: center;
+    height: 500px;
+}
+
+.artlist {
+    position: relative;
+}
+
+.list {
+    position: relative;
+    top: 20px;
+}
+
+.title {
+    font-family: 'KCC';
+    font-size: 100px;
+    position: relative;
+    top: 50px;
+    color: white;
+}
+
+.hi {
+    font-family: 'Daehan';
+    background-color: gray;
+    text-align: center;
+    align-items: center;
+    border-style: solid;
+    border-color: gray;
+}
