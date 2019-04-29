@@ -13,9 +13,9 @@
     <h5>리뷰 내용 : {{ post.review }}</h5>
     <h5>가격 : {{ post.price }}</h5>
     <h5>점수 : {{ post.score }} / 5</h5>
-    <a class='hi' href="{% url 'home' %}">글 목록으로 돌아가기</a><br><br>
-    <a class='hi' href="{% url 'edit' post.pk %}">수정하기</a><br><br>
-    <a class='hi' href="{% url 'delete' post.pk %}">지워버린다</a>
+    <a class='hi' href="{% url 'home' %}"><button type="button" class="btn btn-primary">글 목록으로 돌아가기</button></a><br><br>
+    <a class='hi' href="{% url 'edit' post.pk %}"><button type="button" class="btn btn-success">수정하기</button></a><br><br>
+    <a class='hi' href="{% url 'delete' post.pk %}"><button type="button" class="btn btn-danger">지워버린다</button></a>
     {% endblock %}
 </body>
 </html>

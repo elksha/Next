@@ -43,9 +43,8 @@
 
 .hi {
     font-family: 'Daehan';
-    background-color: gray;
     text-align: center;
     align-items: center;
-    border-style: solid;
-    border-color: gray;
+    display: flex;
+    align-content: center;
 }
