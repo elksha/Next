@@ -18,10 +18,8 @@
 
 .next {
     position: relative;
-    background-color: rgba(0, 0, 0, 0.226);
     font-family: 'NanumGothic';
     text-align: center;
-    height: 700px;
 }
 
 .artlist {
@@ -55,4 +53,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.verline {
+    border-right-width: 0.1em;
+    border-right-style: solid;
+    border-right-color: rgba(173, 173, 173, 0.541);
+    position: relative;
+    display: flex;
+    align-content: center;
+}
+
+.mid {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.item {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-right: 0;
 }
