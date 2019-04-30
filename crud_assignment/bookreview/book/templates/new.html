@@ -9,7 +9,10 @@
 </head>
 <body>
     {% block content %}
-    <h1>새 리뷰남기기</h1>
+</br>
+    <h1 class="jumbotron-heading">새 리뷰</h1>
+</br>
+</br>
     <form method="POST">{% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-info">남기기</button>

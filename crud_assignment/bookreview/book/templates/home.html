@@ -16,7 +16,8 @@
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container d-flex justify-content-center">
       <a href="#" class="navbar-brand d-flex align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        <i class="fas fa-book"></i>
+        <div class="blank"></div>
         <strong>The Review</strong>
       </a>
     </div>
@@ -40,25 +41,31 @@
     </div>
   </div> -->
     <ul class="nav nav-tabs bg-dark">
-    <div class="container">
+    <div class="container d-flex justify-content-between">
     <div class="item">
   <li class="nav-item">
-    <a class="nav-link" href="{% url 'home' %}" style="color:white">Home</a>
+    <a class="nav-link" href="{% url 'home' %}" style="color:white">글 목록</a>
+  </li>
+  <li classs="nav-item">
     <div class="verline">
     </div>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="{% url 'new' %}" style="color:white">Write</a>
-    <div class="verline">
-    </div>
+    <a class="nav-link" href="{% url 'new' %}" style="color:white">글쓰기</a>
+  </li>
+  <li classs="nav-item">
+      <div class="verline">
+      </div>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#" style="color:white">Hello</a>
-    <div class="verline">
-    </div>
+    <a class="nav-link" href="#" style="color:white">책 사기</a>
+  </li>
+  <li classs="nav-item">
+      <div class="verline">
+      </div>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#" style="color:white">About</a>
+    <a class="nav-link" href="#" style="color:white">만든 이</a>
   </li>
    </div>
    <form class="form-inline">
@@ -68,14 +75,47 @@
   </div>
   </div>
 </ul>
-    <div class="next">
-    {% block content %}
-        <h2 class='artlist'> 글 목록 </h2>
-            {% for post in posts %}
-            <li class='list'><a href="{% url 'detail' post.pk %}" style="color:black">{{ post.title }}</a></li><br>
-            {% endfor %}
-        <a href="{% url 'new' %}"><button type="button" class="btn btn-primary">글쓰기</button></a>
-    {% endblock %}
+  <div class="next">
+{% block content %}
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">책을 리뷰하세요</h1>
+        <p class="lead text-muted">책은 마음의 양식입니다. 마음에 드는 책을 하나 골라보세요.</br>당신이 읽은 책을 리뷰해보고, 또 다른 책의 리뷰를 검색해보세요.</p>
+        <p>
+          <a href="{% url 'new' %}" class="btn btn-primary my-2">리뷰하러가기</a>
+        </p>
+      </div>
+    </section>
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          {% for post in posts %}
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-imgcard-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder:Thumbnail">
+              <title>
+                Placeholder
+              </title>
+              <rect width="100%" height="100%" fill="#55595c"></rect>
+              <text x="50%" text-anchor="middle" y="50%" fill="#eceeef" dy=".3em">{{ post.title }}</text>
+            </svg>
+              <div class="card-body">
+                <p class="card-text">{{ post.review }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{% url 'detail' post.pk %}" style="color:black">View</a></button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{% url 'edit' post.pk %}" style="color:black">Edit</a></button>
+                  </div>
+                  <small class="text-muted"></small>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
     </div>
+{% endblock %}
+  </div>
 </body>
 </html>
