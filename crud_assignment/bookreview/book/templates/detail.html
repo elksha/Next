@@ -13,9 +13,23 @@
     <h5>리뷰 내용 : {{ post.review }}</h5>
     <h5>가격 : {{ post.price }}</h5>
     <h5>점수 : {{ post.score }} / 5</h5>
-    <a class='hi' href="{% url 'home' %}"><button type="button" class="btn btn-primary">글 목록으로 돌아가기</button></a><br><br>
-    <a class='hi' href="{% url 'edit' post.pk %}"><button type="button" class="btn btn-success">수정하기</button></a><br><br>
-    <a class='hi' href="{% url 'delete' post.pk %}"><button type="button" class="btn btn-danger">지워버린다</button></a>
+    <div class='halu'>
+    <div class='hi'>
+      <a class='hey' href="{% url 'home' %}"><button type="button" class="btn btn-primary">글 목록으로 돌아가기</button></a><br><br>
+      <a class='hey' href="{% url 'edit' post.pk %}"><button type="button" class="btn btn-success">수정하기</button></a><br><br>
+      <a class='hey' href="{% url 'delete' post.pk %}"><button type="button" class="btn btn-danger">지워버린다</button></a>
+    </div>
+    </div>
+    <ul>
+      {% for comment in post.comments.all %}
+        <li>{{ comment.comment }} <a href="{% url 'delete_comment' post.pk comment.pk %}">삭제하기</a></li>
+      {% endfor %}
+    </ul>
+
+    <form method="POST">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-info">남기기</button>
+    </form>
     {% endblock %}
 </body>
 </html>

@@ -13,6 +13,22 @@
     <div class='salut'>
     <h1 class='title'><a href="{% url 'home' %}" style="color:white">Book Review</a></h1>
     </div>
+    <div class='mid'>
+    <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="{% url 'home' %}">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  </li>
+</ul>
+    </div>
     <div class='next'>
     {% block content %}
         <h2 class='artlist'> 글 목록 </h2>
