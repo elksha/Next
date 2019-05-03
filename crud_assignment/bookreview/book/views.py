@@ -9,7 +9,7 @@ def home(request):
 
 def new(request):
     if request.method == 'POST':
-        form = PostForm(request.POST)
+        form = PostForm(request.POST, request.FILES)
         post = form.save(commit=False)
         post.save()
         return redirect('detail', post_pk=post.pk)
@@ -21,7 +21,7 @@ def detail(request, post_pk):
     post = Post.objects.get(pk=post_pk)
 
     if request.method == 'POST':
-        form = CommentForm(request.POST)
+        form = CommentForm(request.POST, request.FILES)
         comment = form.save(commit=False)
         comment.post = post
         comment.save()

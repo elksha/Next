@@ -13,7 +13,7 @@
     <h1 class="jumbotron-heading">새 리뷰</h1>
 </br>
 </br>
-    <form method="POST">{% csrf_token %}
+    <form method="POST" enctype="multipart/form-data">{% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-info">남기기</button>
     </form>

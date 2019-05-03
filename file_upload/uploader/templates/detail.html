@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+  <div>
+    <h2>{{ post.title }}</h2>
+    <img src="{{ post.img.url }}" />
+    </br>
+    <a href="{% url 'home' %}">돌아가자</a>
+  </div>
+{% endblock %}

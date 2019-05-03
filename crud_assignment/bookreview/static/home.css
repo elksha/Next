@@ -138,3 +138,12 @@ h1, h2, h3, h4, h5 {
     margin-right: auto;
     width: 500px;
 }
+
+.leftbar {
+  float: left;
+  position: relative;
+}
+
+.rightbar {
+  float: right;
+}
