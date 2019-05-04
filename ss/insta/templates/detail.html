@@ -1,0 +1,88 @@
+{% extends 'home.html' %}
+{% load staticfiles %}
+{% block content %}
+    <div class="bottombar">
+        <div class="profile">
+        <div class="sajin">
+            <img class="pusa" src="{% static 'fome.jpg' %}">
+        </div>
+        <div class="description">
+            <div class="high">
+            <h3>jyun_taeeeee</h3>
+            <div class="pp">
+            <a href="{% url 'new' %}" style="color:black; position: relative; bottom: 7px;"><button type="button" class="btn btn-info">게시물 올리기</button></a>
+            </div>
+            <i class="fas fa-cog fa-2x"></i>
+            </div>
+            <div class="mid">
+            <p>게시물 <strong>10</strong></p>
+            <p>팔로워 <strong>100M</strong></p>
+            <p>팔로우 <strong>40</strong></p>
+            </div>
+            <div class="low">
+            <p>stop....</p>
+            </div>
+        </div>
+        </div>
+        <div class="story">
+            <div class="firststory">
+            <img class="story1" src="{% static 'st1.jpg' %}"><br>
+            <p class="text1" style="font-size:12px">스토리1 입니다...</p>
+            </div>
+            <div class="secondstory">
+            <img class="story2" src="{% static 'st2.jpg' %}"><br>
+            <p class="text2" style="font-size:12px">스토리2 입니다...</p>
+            </div>
+        </div>
+        <div class="bottomline">
+            <div class="upmenu">
+                <div class="menu">
+                <div class="icon2">
+                <i class="fas fa-table"></i>
+                </div>
+                <p class="menu1">게시물</p>
+                </div>
+                <div class="menu">
+                <div class="icon2">
+                <i class="fas fa-tv"></i>
+                </div>
+                <p class="menu1">IGTV</p>
+                </div>
+                <div class="menu">
+                <div class="icon2">
+                <i class="far fa-bookmark"></i>
+                </div>
+                <p class="menu1">저장됨</p>
+                </div>
+                <div class="menu">
+                <div class="icon2">
+                <i class="fas fa-user-tag"></i>
+                </div>
+                <p class="menu1">태그됨</p>
+                </div>
+            </div>
+    <div class="detailpage">
+    <img src="{{ post.img.url }}" class="imgsizing2" />
+    <div class="commentnav">
+        <div class="imgpart">
+        <img src="{% static 'icons.png' %}" />
+        <a href="{% url 'edit' post.pk %}" style="color:black; position:relative; left:290px;"><i class="fas fa-tools"></i></a>
+        <a href="{% url 'delete' post.pk %}" style="color:black; position:relative; left:298px;"><i class="fas fa-times"></i></a>
+        <img src="{% static 'mark.png' %}" style="position:relative; left:300px;"/>
+        </div>
+        <p style="position:relative; left:5px;"><strong>김준태</strong>　{{ post.title }}</p><br>
+        {% for comment in post.comments.all %}
+            <p style="position:relative; left:5px;"><strong>you</strong>　{{ comment.comment }}</p><br>
+        {% endfor %}
+    </div>
+     <form method="POST">
+      <div class="comment">  
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="blank">
+        </div>
+        <button type="submit" class="btn btn-info">남기기</button>
+      </div>
+    </form>
+    </div>
+{% endblock %}

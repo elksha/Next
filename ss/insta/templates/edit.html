@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+{% block content %}
+    <div class="new-box">
+        <div class="upper-nav">
+            <img src="{% static 'fome.jpg' %}" class="imgsizing" style="position:relative; right:186px;"/>
+            <div class="name-part" style="position:relative; right:186px;">
+                <h5 style="position:relative; left:5px; font-family:'NanumGothic'; font-size: 18px;">김준태</h5>
+                <h4 style="position:relative; left:360px;">···</h4>
+            </div>
+        </div>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="down">
+                    {{ form.as_p }}
+                    <div class="bottom-nav">
+                        <a href="{% url 'home' %}" style="color:black"><i class="fas fa-chevron-left"></i></a>
+                        <p style="position:relative; top:6px; font-family:'NanumGothic';"><strong>새 게시물</strong></p>
+                        <button type="submit" class="btn btn-secondary">수정</button>
+                    </div>
+                </div>
+            </form>
+    </div>
+{% endblock %}

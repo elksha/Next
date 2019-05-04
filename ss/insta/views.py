@@ -1,0 +1,54 @@
+from django.shortcuts import render, redirect
+from .models import Post, Comment
+from .forms import PostForm, CommentForm
+
+# Create your views here.
+def home(request):
+    posts = Post.objects.all()
+    return render(request, 'home.html', { 'posts':posts })
+
+def detail(request, post_pk):
+    post = Post.objects.get(pk=post_pk)
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST, request.FILES)
+        comment = form.save(commit=False)
+        comment.post = post
+        comment.save()
+
+        return redirect('detail', post.pk)
+    else:
+        form = CommentForm()
+        return render(request, 'detail.html', { 'post':post, 'form':form })
+
+def new(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES)
+        post = form.save(commit=False)
+        post.save()
+
+        return redirect('detail', post_pk=post.pk)
+    else:
+        form = PostForm()
+        return render(request, 'new.html', { 'form':form })
+
+def edit(request, post_pk):
+    post = Post.objects.get(pk=post_pk)
+    if request.method == 'POST':
+        form = PostForm(request.POST, instance = post)
+        post = form.save(commit=False)
+        post.save()
+        return redirect('detail', post_pk=post.pk)
+    else:
+        form = PostForm(instance = post)
+        return render(request, 'new.html', { 'form':form })
+
+def delete(request, post_pk):
+    post = Post.objects.get(pk=post_pk)
+    post.delete()
+    return redirect('home')
+
+def delete_comment(request, post_pk, comment_pk):
+    comment = Comment.objects.get(pk=post_pk)
+    comment.delete()
+    return redirect('detail', post_pk)
