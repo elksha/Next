@@ -2,7 +2,11 @@
 {% block content %}
     <div class="new-box">
         <div class="upper-nav">
-            <img src="{% static 'fome.jpg' %}" class="imgsizing" style="position:relative; right:186px;"/>
+            {% for profile in profiles %}
+            {% if forloop.last %}
+            <img src="{{ profile.profile.url }}" class="imgsizing" style="position:relative; right:186px;"/>
+            {% endif %}
+            {% endfor %}
             <div class="name-part" style="position:relative; right:186px;">
                 <h5 style="position:relative; left:5px; font-family:'NanumGothic'; font-size: 18px;">김준태</h5>
                 <h4 style="position:relative; left:360px;">···</h4>

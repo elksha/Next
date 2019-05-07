@@ -11,7 +11,7 @@
     {% block content %}
 <div class="leftbar">
   <div class="imgline">
-  <img src="{{ post.picture.url }}">
+  <img src="{{ post.picture.url }}" />
   </div>
 </br>
     <h2 class="jumbotron-heading" style="font-family:'Daehan'"><strong>{{ post.title }}</strong></h2>
@@ -26,7 +26,7 @@
 <hr width="350" color=lightgray>
 </br>
     <div class="reviewline">
-    <h5 class="jumbotron-heading">{{ post.review }}</h5>      
+    <h5 class="jumbotron-heading" id="review">{{ post.review }}</h5> 
     </div>
 </br>
 </br>

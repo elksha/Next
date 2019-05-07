@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post, Comment
+from .models import Post, Comment, Profile
 
 class PostForm(forms.ModelForm):
     title = forms.CharField(widget=forms.Textarea(attrs={'rows':5, 'cols':68, 'placeholder':' 글을 입력하세요.'}), label='')
@@ -13,3 +13,8 @@ class CommentForm(forms.ModelForm):
     class Meta():
         model = Comment
         fields = ('comment', )
+
+class ProfileForm(forms.ModelForm):
+    class Meta():
+        model = Profile
+        fields = ('profile', )

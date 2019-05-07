@@ -32,7 +32,11 @@
     <div class="bottombar">
         <div class="profile">
         <div class="sajin">
-            <img class="pusa" src="{% static 'fome.jpg' %}">
+            {% for profile in profiles %}
+            {% if forloop.last %}
+            <img class="pusa" src="{{ profile.profile.url }}">
+            {% endif %}
+            {% endfor %}
         </div>
         <div class="description">
             <div class="high">
@@ -40,7 +44,7 @@
             <div class="pp">
             <a href="{% url 'new' %}" style="color:black; position: relative; bottom: 7px;"><button type="button" class="btn btn-info">게시물 올리기</button></a>
             </div>
-            <i class="fas fa-cog fa-2x"></i>
+            <a href="{% url 'proedit' %}"><i class="fas fa-cog fa-2x"></i></a>
             </div>
             <div class="mid">
             <p>게시물 <strong>10</strong></p>

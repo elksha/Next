@@ -4,7 +4,11 @@
     <div class="bottombar">
         <div class="profile">
         <div class="sajin">
-            <img class="pusa" src="{% static 'fome.jpg' %}">
+            {% for profile in profiles %}
+            {% if forloop.last %}
+            <img src="{{ profile.profile.url }}" class="imgsizing" style="position:relative; right:186px;"/>
+            {% endif %}
+            {% endfor %}
         </div>
         <div class="description">
             <div class="high">

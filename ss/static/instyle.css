@@ -242,6 +242,19 @@ body {
     width: 500px;
 }
 
+.bottomnav {
+    position: relative;
+    bottom: 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-style: solid;
+    border-color: rgb(224, 224, 224);
+    border-width: 1px;
+    height: 60px;
+    width: 500px;
+}
+
 #id_comment {
     position: relative;
     top: 8px;
@@ -311,6 +324,17 @@ p {
     margin-top: 30px;
     background: #ffffff;
     top: 80px;
+    position: relative;
+}
+
+.new-box2 {
+    width: 500px;
+    height: 280px;
+    border: 1px solid #d8d8d8;
+    margin: 0 auto;
+    margin-top: 30px;
+    background: #ffffff;
+    top: 180px;
     position: relative;
 }
 
