@@ -57,16 +57,29 @@
       <div class="verline">
       </div>
   </li>
+  {% if user.is_authenticated %}
   <li class="nav-item">
-    <a class="nav-link" href="#" style="color:white">책 사기</a>
+    <a class="nav-link" href="#" style="color:white"><strong>{{ user.username }}</strong>님 환영합니다!</a>
   </li>
   <li classs="nav-item">
       <div class="verline">
       </div>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#" style="color:white">만든 이</a>
+    <a class="nav-link" href="{% url 'logout' %}" style="color:white">로그아웃</a>
   </li>
+  {% else %}
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'login' %}" style="color:white">로그인</a>
+  </li>
+  <li classs="nav-item">
+      <div class="verline">
+      </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'signup' %}" style="color:white">회원가입</a>
+  </li>
+  {% endif %}
    </div>
    <form class="form-inline">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -86,7 +99,7 @@
         </p>
       </div>
     </section>
-    <div class="album py-5 bg-light">
+    <div class="album py-5 bg-light" style="position:relative; bottom:33px;">
       <div class="container">
         <div class="row">
           {% for post in posts %}
@@ -105,7 +118,11 @@
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{% url 'detail' post.pk %}" style="color:black">View</a></button>
+                    {% if post.author == user.username %}
                     <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{% url 'edit' post.pk %}" style="color:black">Edit</a></button>
+                    {% else %}
+                    <button class="btn btn-sm btn-outline-secondary"><a href="{% url 'home' %}" style="color:black">Edit</a></button>
+                    {% endif %}
                   </div>
                   <small class="text-muted"></small>
                 </div>
