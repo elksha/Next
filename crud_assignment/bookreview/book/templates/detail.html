@@ -11,13 +11,13 @@
     {% block content %}
 <div class="leftbar">
   <div class="imgline">
-  <img src="{{ post.picture.url }}" />
+  <img src="{{ post.picture.url }}" style="height:400px; width:350px; position:relative; left:100%; top:40px; border-style:solid; border-width:1px; border-color:gray;"/>
   </div>
 </br>
-    <h2 class="jumbotron-heading" style="font-family:'Daehan'"><strong>{{ post.title }}</strong></h2>
+    <h2 class="jumbotron-heading" style="font-family:'Daehan'; position:relative; top:240px; left:135%;"><strong>{{ post.title }}</strong></h2>
 </br>
 </div>
-<div class="rightbar">
+<div class="rightbar" style="position:relative; top:15px; right:70px;">
 <hr width="350" color=lightgray>
     <h5 class="jumbotron-heading">가격 : {{ post.price }}</h5>
     <h5>　　　　</h5>
@@ -25,7 +25,7 @@
 </br>
 <hr width="350" color=lightgray>
 </br>
-    <div class="reviewline">
+    <div class="reviewline" style="position:relative; height:150px;">
     <h5 class="jumbotron-heading" id="review">{{ post.review }}</h5> 
     </div>
 </br>
