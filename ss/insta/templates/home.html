@@ -1,0 +1,111 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="{% static 'instyle.css' %}?ver=1" type="text/css" rel="stylesheet">
+    <title>Instagram</title>
+</head>
+<body>
+    <div class="topbar">
+        <a href="{% url 'home' %}"><img class="logo" src="{% static 'insta-logo.png' %}"></a>
+        <div class="search">
+        <input class="form-control mr-sm-2" type="Search" placeholder="검색" aria-label="Search">
+        </div>
+        <div class="icon">
+            <div class="each">
+            <i class="far fa-heart fa-2x"></i>
+            </div>
+            <div class="each">
+            <i class="far fa-compass fa-2x"></i>
+            </div>
+            <div class="each">
+            <i class="far fa-user fa-2x"></i>
+            </div>
+        </div>
+    </div>
+{% block content %}
+    <div class="bottombar">
+        <div class="profile">
+        <div class="sajin">
+            {% for profile in profiles %}
+            {% if forloop.last %}
+            <img class="pusa" src="{{ profile.profile.url }}">
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="description">
+            <div class="high">
+            <h3>jyun_taeeeee</h3>
+            <div class="pp">
+            <a href="{% url 'new' %}" style="color:black; position: relative; bottom: 7px;"><button type="button" class="btn btn-info">게시물 올리기</button></a>
+            </div>
+            <a href="{% url 'proedit' %}"><i class="fas fa-cog fa-2x"></i></a>
+            </div>
+            <div class="mid">
+            <p>게시물 <strong>10</strong></p>
+            <p>팔로워 <strong>100M</strong></p>
+            <p>팔로우 <strong>40</strong></p>
+            </div>
+            <div class="low">
+            <p>stop....</p>
+            </div>
+        </div>
+        </div>
+        <div class="story">
+            <div class="firststory">
+            <img class="story1" src="{% static 'st1.jpg' %}"><br>
+            <p class="text1" style="font-size:12px">스토리1 입니다...</p>
+            </div>
+            <div class="secondstory">
+            <img class="story2" src="{% static 'st2.jpg' %}"><br>
+            <p class="text2" style="font-size:12px">스토리2 입니다...</p>
+            </div>
+        </div>
+        <div class="bottomline">
+            <div class="upmenu">
+                <div class="menu">
+                <div class="icon2">
+                <i class="fas fa-table"></i>
+                </div>
+                <p class="menu1">게시물</p>
+                </div>
+                <div class="menu">
+                <div class="icon2">
+                <i class="fas fa-tv"></i>
+                </div>
+                <p class="menu1">IGTV</p>
+                </div>
+                <div class="menu">
+                <div class="icon2">
+                <i class="far fa-bookmark"></i>
+                </div>
+                <p class="menu1">저장됨</p>
+                </div>
+                <div class="menu">
+                <div class="icon2">
+                <i class="fas fa-user-tag"></i>
+                </div>
+                <p class="menu1">태그됨</p>
+                </div>
+            </div>
+            <div class="spec">
+                {% for post in posts %}
+                <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                <a href="{% url 'detail' post.pk %}"><img src="{{ post.img.url }}" class="imgsizing3"/></a>
+                <div class="d-flex justify-content-between align-items-center">
+                </div>
+                </div>
+                </div>
+          {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+</body>
+</html>

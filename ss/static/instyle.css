@@ -1,0 +1,361 @@
+@font-face {
+    font-family: 'NanumGothic';
+    src: url(NanumGothic.ttf) format('truetype');
+    font-family: 'Daehan';
+    src: url(대한뉴스L.otf) format('opentype');
+    font-family: 'KCC';
+    src: url(KCC-eunyoung.ttf) format('truetype');
+}
+
+body {
+    background-color: rgb(248, 248, 248);
+}
+
+.logo {
+    width: 150px;
+    height: 50px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(187, 187, 187);
+    height: 80px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    z-index:1000;
+}
+
+.icon {
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+}
+
+.each {
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+    width: 60px;
+}
+
+.search {
+    width: auto;
+}
+
+.bottombar {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(248, 248, 248);
+    top: 65px;
+}
+
+.profile {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50px;
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+}
+
+.pusa {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.description {
+    position: relative;
+    top: 20px;
+}
+
+.high {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.mid {
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+    width: 400px;
+    position: relative;
+    top: 20px;
+    left: -10px;
+}
+
+.low {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    top: 25px;
+    left: 20px;
+}
+
+.pp {
+    position: relative;
+    top: 7px;
+}
+
+.story {
+    width: 800px;
+    position: relative;
+    top: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.story1 {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white;
+}
+
+.text1 {
+    position: relative;
+    top: 9px;
+    left: 13px;
+}
+
+.story2 {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white;
+}
+
+.text2 {
+    position: relative;
+    top: 9px;
+    left: 17px;
+}
+
+.secondstory {
+    position: relative;
+    left: 70px;
+}
+
+.bottomline {
+    left: 20px;
+    width: 900px;
+    margin: 0 auto;
+    position: relative;
+    top: 160px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: rgb(187, 187, 187);
+}
+
+.upmenu {
+    position: relative;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    position: relative;
+    margin-left: 33px;
+    margin-right: 33px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.spec {
+    position: relative;
+    right: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border-width: 1px;
+    width: 900px;
+    height: 300px;
+}
+/* 가로로 쭉 정렬하고 width를 넘기면 다음 줄로 넘어가기 */
+
+.menu {
+    display: flex;
+}
+
+.menu1 {
+    position: relative;
+    left: 3px;
+}
+
+.icon2 {
+    position: relative;
+}
+
+.spec1 {
+    width: 270px;
+    height: 270px;
+    position: relative;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(221, 221, 221);
+}
+
+.upper-nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(224, 224, 224);
+    border-bottom-width: 1px;
+    height: 60px;
+}
+
+.bottom-nav {
+    position: relative;
+    bottom: 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-style: solid;
+    border-color: rgb(224, 224, 224);
+    border-width: 1px;
+    height: 60px;
+    width: 500px;
+}
+
+.bottomnav {
+    position: relative;
+    bottom: 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-style: solid;
+    border-color: rgb(224, 224, 224);
+    border-width: 1px;
+    height: 60px;
+    width: 500px;
+}
+
+#id_comment {
+    position: relative;
+    top: 8px;
+    right: 5px;
+    width: 400px;
+    border: none;
+}
+
+.imgsizing {
+    object-fit: cover;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgb(224,224,224);
+}
+
+.imgsizing2 {
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgb(224, 224, 224);
+}
+
+.detailpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(224, 224, 224);
+    width: 500px;
+    height: 50px;
+    background: rgb(255, 255, 255);
+}
+
+.commentnav {
+    width: 500px;
+    height: 220px;
+    border: 1px solid rgb(224, 224, 224);
+    background: rgb(255, 255, 255);
+}
+
+p {
+    display: inline;
+}
+
+#id_img {
+    padding: 40px;
+}
+
+#id_title {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: rgb(224, 224, 224);
+}
+
+.new-box {
+    width: 500px;
+    height: 310px;
+    border: 1px solid #d8d8d8;
+    margin: 0 auto;
+    margin-top: 30px;
+    background: #ffffff;
+    top: 80px;
+    position: relative;
+}
+
+.new-box2 {
+    width: 500px;
+    height: 280px;
+    border: 1px solid #d8d8d8;
+    margin: 0 auto;
+    margin-top: 30px;
+    background: #ffffff;
+    top: 180px;
+    position: relative;
+}
+
+.name-part {
+    display: flex;
+    align-items: center;
+}
+
+textarea {
+    border: none;
+}
+
+.down {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.imgsizing3 {
+    width: 300px;
+    height: 300px;
+}
