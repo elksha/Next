@@ -7,6 +7,8 @@ verify_ssl = true
 
 [packages]
 selenium = "*"
+requests = "*"
+bs4 = "*"
 
 [requires]
 python_version = "3.7"
