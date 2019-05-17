@@ -1,0 +1,20 @@
+.search {
+    display: flex;
+    justify-content: center;
+}
+
+.crawled {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ctitle {
+    display: flex;
+    justify-content: center;
+}
+
+#id_word {
+    width: 400px;
+    height: 50px;
+}
