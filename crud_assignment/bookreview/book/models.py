@@ -20,6 +20,7 @@ class Post(models.Model):
     price = models.FloatField()
     score = models.CharField(max_length=1, choices=Score_Choices)
     picture = models.FileField(null=True, blank=True, default='static/error.jpg')
+    author = models.CharField(max_length=50, default="")
 
     def __str__(self):
         return self.title
@@ -27,3 +28,4 @@ class Post(models.Model):
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
     comment = models.TextField()
+    author = models.CharField(max_length=50, default="")

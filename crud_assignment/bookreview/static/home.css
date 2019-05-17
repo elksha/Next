@@ -137,6 +137,7 @@ h1, h2, h3, h4, h5 {
     margin-left: auto;
     margin-right: auto;
     width: 500px;
+    height: 500px;
 }
 
 .leftbar {
@@ -146,4 +147,10 @@ h1, h2, h3, h4, h5 {
 
 .rightbar {
   float: right;
+}
+
+.imgline {
+  position: relative;
+  width: 200px;
+  height: 200px;
 }
