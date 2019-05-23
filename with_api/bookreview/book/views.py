@@ -80,3 +80,9 @@ def signup(request):
     else:
         form = UserForm()
         return render(request, 'registration/signup.html', {'form': form})
+
+def detail2(request):
+    return render(request, 'detail2.html')
+
+def about(request):
+    return render(request, 'about.html')

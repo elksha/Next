@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title1">제목입니다</h1>
+    <h1 class="title2">이것도 제목입니다</h1>
+    <h2>요것도 제목입니다</h2>
+
+    <script>
+        let h1 = document.querySelector('h1')
+        h1.style.color = 'green'
+
+        let body = document.querySelector('body')
+
+        setInterval(function() {
+            body.style.backgroundColor =
+                (body.style.backgroundColor === 'red' ) ? 'blue' : 'red'
+        },1000)
+
+        console.log(document)
+        console.log(h1)
+
+        let h1s = document.querySelectorAll('h1')
+        h1s[0].style.color = 'green'
+        h1s[1].style.color = 'blue'
+        console.log(h1s)
+
+        let title1 = document.querySelector('#title1')
+        title1.style.color = 'green'
+        let title2 = document.querySelector('.title2')
+        title2.style.color = 'blue'
+        let h2 = document.querySelector('h2')
+        h2.style.color = 'red'
+    </script>
+</body>
+</html>
