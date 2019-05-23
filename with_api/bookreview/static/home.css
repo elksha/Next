@@ -5,6 +5,10 @@
     src: url(대한뉴스L.otf) format('opentype');
     font-family: 'KCC';
     src: url(KCC-eunyoung.ttf) format('truetype');
+    font-family: 'om3';
+    src: url(om3.ttf) format('truetype');
+    font-family: 'om4';
+    src: url(om4.otf) format('opentype');
 }
 
 .salut {

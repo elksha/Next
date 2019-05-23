@@ -6,10 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-django = "==2.2"
-django-storages = "*"
-boto3 = "*"
-json = "*"
+django = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.6"

@@ -13,15 +13,14 @@
     <title>Document</title>
 </head>
 <body>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container d-flex justify-content-center">
-      <a href="#" class="navbar-brand d-flex align-items-center">
-        <i class="fas fa-book"></i>
+      <a href="#" class="navbar-brand d-flex align-items-center" style="position:relative; margin-bottom: 0px; padding-bottom: 0px;">
+        <img src="{% static '45.png' %}" style="height: 100px;"/>
+        <!-- <i class="fas fa-book"></i>
         <div class="blank"></div>
-        <strong style="font-family:Daehan;">안암보도</strong>
+        <strong style="font-family:Daehan;">안암보도</strong> -->
       </a>
     </div>
-  </div>
   <!-- <div class="collapse bg-dark" id="navbarHeader">
     <div class="container">
       <div class="row">
@@ -40,18 +39,19 @@
       </div>
     </div>
   </div> -->
-    <ul class="nav nav-tabs bg-dark">
+  <div style="border-top-style: solid; border-top-color: pink; border-width: 1px; border-bottom-style: solid; border-bottom-color: pink;">
+    <ul class="nav nav-tabs bg-light">
     <div class="container d-flex justify-content-between">
     <div class="item">
   <li class="nav-item">
-    <a class="nav-link" href="{% url 'home' %}" style="color:white">About</a>
+    <a class="nav-link" href="{% url 'home' %}" style="color:black">About</a>
   </li>
   <li classs="nav-item">
     <div class="verline">
     </div>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="{% url 'new' %}" style="color:white">Detail</a>
+    <a class="nav-link" href="{% url 'new' %}" style="color:black">Detail</a>
   </li>
    </div>
    <form class="form-inline">
@@ -61,14 +61,16 @@
   </div>
   </div>
 </ul>
+</div>
   <div class="next">
 {% block content %}
-    <section class="jumbotron text-center">
+    <section class="jumbotron text-center" style="background-image: url( '{% static '14.png' %}' ); background-size: cover; background-position: center; height: 300px;">
       <div class="container">
-        <h1 class="jumbotron-heading">횡단보도 정보를 알아보세요</h1>
-        <p class="lead text-muted">횡단보도가 어디있는지 궁금하신가요?</br>횡단보도의 위치를 아래에서 확인해보세요.</p>
+        <h1 style="font-family: 'om4'; font-size: 40px;"></h1>
+        <div style="position:relative; height:10px;"></div>
+        <p style="font-family: 'om3'; font-size: 25px; color:gray;"></p>
         <p>
-          <a href="{% url 'new' %}" class="btn btn-primary my-2">확인하러가기</a>
+          <a href="{% url 'new' %}" class="btn btn-info my-2" style="position: relative; top: 100px;">확인하러가기</a>
         </p>
       </div>
     </section>
@@ -77,12 +79,21 @@
 // Initialize and add the map
 function initMap() {
   // The location of Uluru
-  var uluru = {lat: -25.344, lng: 131.036};
+  var anam = {lat: 37.586330, lng: 127.029421};
+  var kosa = {lat: 37.586429, lng: 127.032775};
+  var kodae = {lat: 37.591360, lng: 127.036316};
+  var jeong = {lat: 37.588240, lng: 127.034642};
+  var korea = {lat: 37.588728, lng: 127.033076};
+  var kohu = {lat: 37.592644, lng: 127.036305};
   // The map, centered at Uluru
   var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: uluru});
+      document.getElementById('map'), {zoom: 16, center: korea});
   // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
+  var marker = new google.maps.Marker({position: anam, map: map});
+  var marker = new google.maps.Marker({position: kodae, map: map});
+  var marker = new google.maps.Marker({position: kosa, map: map});
+  var marker = new google.maps.Marker({position: jeong, map: map});
+  var marker = new google.maps.Marker({position: kohu, map: map});
 }
     </script>
     <script async defer
