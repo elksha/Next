@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-center">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <i class="fas fa-newspaper fa-2x"></i>
+        <div style="width:12px;"></div>
+        <strong style="font-size:30px">News API</strong>
+      </a>
+    </div>
+  </div>
+    <div class="album py-5 bg-light" style="position:relative; bottom:0px;">
+      <div class="container">
+        <div class="row">
+            {% for a in articlesSorted %}
+            <div class="col-md-4" style="max-width:100%;">
+            <div class="card mb-4 shadow-sm" style="width:500px;">
+            <svg class="bd-placeholder-imgcard-img-top" width="100%" height="0px" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder:Thumbnail">
+              <title>
+                Placeholder
+              </title>
+              <img src="{{ a.urlToImage }}" style="width:497px;"/>
+              <rect width="100%" height="100%" fill="#55595c"></rect>
+              <text x="50%" text-anchor="middle" y="50%" fill="#eceeef" dy=".3em">{{ post.title }}</text>
+            </svg>
+              <div class="card-body">
+                <p class="card-text">{{ a.title }} {{ a.sources_name }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{{ a.url }}" style="color:black">기사원문보기</a></button>
+                  </div>
+                  <small class="text-muted"></small>
+                </div>
+              </div>
+            </div>
+            </div>
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+</body>
+</html>
+          {% for post in posts %}
+          {% endfor %}

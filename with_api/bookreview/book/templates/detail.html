@@ -1,0 +1,71 @@
+{% extends 'home.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+<div class="leftbar">
+  <div class="imgline">
+  <img src="{{ post.picture.url }}" style="height:400px; width:350px; position:relative; left:100%; top:40px; border-style:solid; border-width:1px; border-color:gray;"/>
+  </div>
+</br>
+    <h2 class="jumbotron-heading" style="font-family:'Daehan'; position:relative; top:240px; left:135%;"><strong>{{ post.title }}</strong></h2>
+</br>
+</div>
+<div class="rightbar" style="position:relative; top:15px; right:70px;">
+<hr width="350" color=lightgray>
+    <h5 class="jumbotron-heading">가격 : {{ post.price }}</h5>
+    <h5>　　　　</h5>
+    <h5 class="jumbotron-heading">점수 : {{ post.score }} / 5</h5>
+</br>
+<hr width="350" color=lightgray>
+</br>
+    <div class="reviewline" style="position:relative; height:150px;">
+    <h5 class="jumbotron-heading" id="review">{{ post.review }}</h5> 
+    </div>
+</br>
+</br>
+</br>
+    <div class='halu'>
+    <div class='hi'>
+      <a class='hey' href="{% url 'home' %}"><button type="button" class="btn btn-primary">글 목록</button></a><br><br>
+      {% if user.is_authenticated and post.author == user.username %}
+      <a class='hey' href="{% url 'edit' post.pk %}"><button type="button" class="btn btn-success">수정하기</button></a><br><br>
+      <a class='hey' href="{% url 'delete' post.pk %}"><button type="button" class="btn btn-danger">지우기</button></a>
+      {% endif %}
+    </div>
+    </div>
+<hr width="700" color=lightgray>
+    <div class='commentline'>
+    <ul>
+      {% for comment in post.comments.all %}
+        <li><strong>{{ comment.author }}</strong>:{{ comment.comment }}
+        {% if user.is_authenticated and comment.author == user.username %}
+        <a href="{% url 'delete_comment' post.pk comment.pk %}" style="color:black"><i class="fas fa-times"></i></a>
+        {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+    </div>
+    <form method="POST">
+      <div class="comment">  
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="blank">
+        </div>
+        {% if user.is_authenticated %}
+        <button type="submit" class="btn btn-info">남기기</button>
+        {% else %}
+        <button class="btn btn-info"><a href="{% url 'login' %}" style="color:white">남기기</a></button>
+        {% endif %}
+      </div>
+    </form>
+    {% endblock %}
+</div>
+</body>
+</html>
