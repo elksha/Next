@@ -1,16 +1,21 @@
 {% extends 'home.html' %}
+{% load staticfiles %}
 {% block content %}
-    <div class="afirst">
+    <div class="afirst" style="padding-top:35px;">
     <h1> 안암보도란? </h1>
-    <p> 안암보도는 2019년 시작한 서비스입니다. </p>
+    <p style="padding-top:7px; color:rgb(128, 128, 128);"> 안암보도는 2019년 시작한 서비스로, <br>
+        횡단보도의 실시간 정보를 담아 <br>
+        사람들에게 편리함을 제공하고자 시작되었습니다. </p>
     </div>
-    <div class="asecond" style="border-bottom-style:solid; border-width:1px; border-color:lightgray; height:200px;">
+    <div style="background-image:url('{% static '21.png' %}'); height: 800px; background-size: cover; background-position: center;">
+    </div>
+    <!-- <div class="asecond" style="color: white; font-family: 'om3'; padding-top:10px; background-color:#555555; border-width:1px; border-color:lightgray; height:500px;">
     <h1> 그렇습니다 </h1>
     </div>
-    <div class="athird" style="border-bottom-style:solid; border-width:1px; border-color:lightgray; height:200px;">
+    <div class="athird" style="font-family: 'om3'; padding-top:10px; background-color:rgb(252, 255, 85); border-width:1px; border-color:lightgray; height:500px;">
     <h1> 그렇습니다 </h1>
     </div>
-    <div class="afourth" style="border-bottom-style:solid; border-width:1px; border-color:lightgray; height:200px;">
+    <div class="afourth" style="font-family: 'om3'; padding-top:10px; background-color:rgb(136, 255, 121); border-width:1px; border-color:lightgray; height:500px;">
     <h1> 그렇습니다 </h1>
-    </div>
+    </div> -->
 {% endblock %}

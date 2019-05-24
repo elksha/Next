@@ -13,14 +13,13 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container d-flex justify-content-center">
-      <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center" style="position:relative; margin-bottom: 0px; padding-bottom: 0px;">
-        <img src="{% static '45.png' %}" style="height: 100px;"/>
+    <a href="{% url 'home' %}" style="position:relative; margin-bottom: 0px; padding-bottom: 0px;">
+    <div style="background-image:url('{% static '45.png' %}'); background-size: cover; background-position: center; height: 100px;">
         <!-- <i class="fas fa-book"></i>
         <div class="blank"></div>
         <strong style="font-family:Daehan;">안암보도</strong> -->
-      </a>
     </div>
+    </a>
   <!-- <div class="collapse bg-dark" id="navbarHeader">
     <div class="container">
       <div class="row">
