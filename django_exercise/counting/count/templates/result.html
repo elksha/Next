@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'home.html' %}
+{% block content %}
+<div style="font-family: 'om3'; display: flex; justify-content: center; align-items: center; flex-direction: column;">
     <h2>당신이 입력한 텍스트는 {{ wordcount }} 단어 입니다.</h2>
-    <a href="{% url 'home' %}">다시하기</a>
+    <a href="{% url 'home' %}"><button class="btn btn-primary">다시하기</button></a>
     <h3>입력받은 텍스트</h3>
     <div style="width:500px;">
         {{ text }}
@@ -20,5 +14,5 @@
         <br>
         {% endfor %}
     </div>
-</body>
-</html>
+</div>
+{% endblock %}
