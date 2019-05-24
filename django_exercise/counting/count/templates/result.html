@@ -1,14 +1,14 @@
 {% extends 'home.html' %}
 {% block content %}
 <div style="font-family: 'om3'; display: flex; justify-content: center; align-items: center; flex-direction: column;">
-    <h2>당신이 입력한 텍스트는 {{ wordcount }} 단어 입니다.</h2>
-    <a href="{% url 'home' %}"><button class="btn btn-primary">다시하기</button></a>
-    <h3>입력받은 텍스트</h3>
-    <div style="width:500px;">
+    <h2 style="position: relative; top: 15px;">당신이 입력한 텍스트는 {{ wordcount }} 단어 입니다.</h2>
+    <a href="{% url 'home' %}"><button style="position: relative; top: 15px;" class="btn btn-primary">다시하기</button></a>
+    <h3 style="position: relative; top: 30px;">입력받은 텍스트</h3>
+    <div style="width:500px; position: relative; top: 30px;">
         {{ text }}
     </div>
-    <h3>단어 카운트</h3>
-    <div>
+    <h3 style="position: relative; top: 40px;">단어 카운트</h3>
+    <div style="position: relative; top: 40px;">
         {% for i in final %}
         {{i}}
         <br>
