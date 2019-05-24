@@ -30,10 +30,9 @@
 .afirst {
   font-family: 'om3';
   text-align:center;
-  border-bottom-style:solid;
   border-width:1px;
   border-color:lightgray;
-  height: 200px;
+  height:200px;
 }
 
 .salut {
