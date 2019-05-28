@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>여기가 바뀔거에요</h1>
+    <h1 id="result">___________</h1>
+    <input type="text" id="input"/>
+    <h1>내가 뭘 눌렀지?</h1>
+    <h2 class="d">이건가?</h2>
+    <h3 class="d">요건가?</h3>
+    <h4 class="d">저건가?</h4>
+    <button class="a">이건가?</button>
+    <button class="b">요건가?</button>
+    <button class="c">저건가?</button>
+    <h1>운장이 형은 <i>바보</i>다</h1>
+    <h1 id="title">제목입니다</h1>
+    <button>아닐걸?</button>
+    <a href="https://www.naver.com">네이버로 가기</a>
+    <img src="https://picsum.photos/200/300" />
+    
+    <div class="box">박스</div>
+
+    <script>
+        let box = document.querySelector('.box')
+
+        box.addEventListener('mouseover', function() {
+            console.log("마우스가 올라갔다!");
+            box.style.backgroundColor = 'blue'
+        })
+
+        box.addEventListener('mouseout', function() {
+            console.log("마우스가 나갔다!");
+            box.style.backgroundColor = 'yellow'
+        })
+
+        let h1 = document.querySelector('h1')
+        let buttons = document.querySelector('button');
+        let hs = document.querySelectorAll('.d');
+        // let a = document.querySelector('.a')
+        // let b = document.querySelector('.b')
+        // let c = document.querySelector('.c')
+
+        // button.addEventListener("click", function() {
+        //     h1.innerHTML = '운장이는 <i>몽총이</i>다'
+        //     button.innerHTML = '그거지!'
+        // })
+        
+        // a.addEventListener("click", function() {
+        //     a.innerHTML = '찾았다!'
+        // })
+
+        // b.addEventListener("click", function() {
+        //     b.innerHTML = '찾았다!'
+        // })
+        
+        // c.addEventListener("click", function() {
+        //     c.innerHTML = '찾았다!'
+        // })
+
+        // buttons.forEach(function(button) {
+        //     buttons.addEventListener("click", function() {
+        //         buttton.innerHTML = "찾았다!";
+        //     });
+        // });
+
+        hs.forEach(function(h) {
+            h.addEventListener("click", function() {
+                this.innerHTML = "찾았다!";
+            })
+        })
+
+        let result = document.querySelector('#result')
+        let input = document.querySelector('#input')
+
+        input.addEventListener('keyup', keyup)
+
+        function keyup(event) {
+            if (event.keyCode === 13) {
+                result.textContent = input.value;
+            }
+            // switch(event.keyCode) {
+            //     case 13:
+            //         result.textContent = '엔터를 누르셨네요';
+            //         break;
+            //     case 16:
+            //         result.textContent = '쉬프트를 누르셨네요';
+            //         break;
+            //     case 18:
+            //         result.textContent = '알트를 누르셨네요';
+            //         break;
+            //     case 17:
+            //         result.textContent = '컨트롤을 누르셨네요';
+            //         break;
+            //     default:
+            //         result.textContent = '이상한 키를 누르셨네요';
+            //         break;
+            // }
+
+            // console.log(event)
+            // console.log(input.value)
+        }
+
+
+    </script>
+</body>
+<script>
+//     let title = document.querySelector('#title')
+//     title.classList.add("title_style");
+    
+//     let h1 = document.querySelector('h1')
+//     console.log(h1.innerHTML)
+//     console.log(h1.textContent)
+    
+//     h1.innerHTML = '운장이는 <i>바보<i>다'
+//     h1.textContent = 'hi'
+    
+//     let link = document.querySelector('a')
+//     let image = document.querySelector('img')
+
+//     console.log(link.setAttribute('href', "https://www.google.com"))
+//     link.textContent = '구글로가기'
+//     console.log(image.setAttribute('src', "https://picsum.photos/300/300"))
+</script>    
+</html>

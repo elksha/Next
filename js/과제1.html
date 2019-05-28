@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>여기가 바뀔거에요</h1>
+    <h1 id="result">___________</h1>
+    <input type="text" id="input"/>
+    <script>
+        let result = document.querySelector('#result')
+        let input = document.querySelector('#input')
+
+        input.addEventListener('keyup', keyup)
+
+        function keyup(event) {
+            if (event.keyCode === 13) {
+                result.textContent = input.value;
+                input.value = '';
+            }
+        }
+    </script>
+</body>
+</html>

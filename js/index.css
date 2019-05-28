@@ -1,0 +1,9 @@
+.title_style {
+    font-size: 50px;
+    color: red;
+    font-weight: bold;
+}
+
+.box:hover {
+    background-color: blue;
+}
