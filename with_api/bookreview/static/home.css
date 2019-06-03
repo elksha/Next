@@ -27,6 +27,28 @@
     src: url(NotoSansKR-Regular.otf) format('opentype');
 }
 
+.bfirst {
+  background-color: rgb(255, 204, 204);
+  font-family: 'om3';
+}
+
+.bsecond {
+  font-family: 'om3';
+}
+
+.bthird {
+  background-color: rgb(255, 204, 204);
+  font-family: 'om3';
+}
+
+.bfourth {
+  font-family: 'om3';
+}
+
+.bfifth {
+  background-color: rgb(255, 204, 204);
+  font-family: 'om3';
+}
 .afirst {
   font-family: 'om3';
   text-align:center;
