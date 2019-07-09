@@ -1,0 +1,288 @@
+.logo {
+    width: 150px;
+    height: 50px;
+}
+
+.topbar {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(187, 187, 187);
+    height: 80px;
+    width: 100%;
+}
+
+.icon {
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+}
+
+.each {
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+    width: 60px;
+}
+
+.search {
+    width: auto;
+}
+
+.bottombar {
+    height: 200px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(248, 248, 248);
+}
+
+.profile {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 35px;
+    width: 80%;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+}
+
+.pusa {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.description {
+    position: relative;
+    left: 20px;
+    top: 20px;
+}
+
+.high {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.mid {
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+    width: 400px;
+    position: relative;
+    top: 20px;
+    left: -10px;
+}
+
+.low {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    top: 25px;
+    left: 20px;
+}
+
+.pp {
+    position: relative;
+    top: 7px;
+}
+
+.story {
+    width: 800px;
+    position: relative;
+    top: 68px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.story1 {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white;
+}
+
+.text1 {
+    position: relative;
+    top: 9px;
+    left: 13px;
+    font-size: 12px;
+}
+
+.story2 {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white;
+}
+
+.text2 {
+    position: relative;
+    top: 9px;
+    left: 17px;
+    font-size: 12px;
+}
+
+.secondstory {
+    position: relative;
+    left: 70px;
+}
+
+.bottomline {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    top: 80px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: rgb(187, 187, 187);
+}
+
+.upmenu {
+    position: relative;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    position: relative;
+    margin-left: 33px;
+    margin-right: 33px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.spec {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border-width: 1px;
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
+    max-height: 300px;
+    justify-content: center;
+    margin: 0 0;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu1 {
+    position: relative;
+    left: 3px;
+}
+
+.icon2 {
+    position: relative;
+}
+
+.spec1 {
+    max-width: 31%;
+    position: relative;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-top: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(221, 221, 221);
+}
+
+.hidden {
+    position: relative;
+    top: 50px;
+    margin: 0 auto;
+    height: 0%;
+    font-size: 0%;
+}
+
+.hidden2 {
+    height: 0%;
+    font-size: 0%;
+}
+
+@media (max-width: 800px) {
+    .story, .story1, .story2, .text1, .text2 {
+        height: 0%;
+        font-size: 0%;
+        width: 0%;
+    }
+    .spec1 {
+        margin-right: 4px;
+        margin-left: 4px;
+        margin-top: 4px;
+    }
+}
+
+@media (max-width: 600px) {
+    .search, .mr-sm-2 {
+        height: 0%;
+        width: 0%;
+    }
+    .form-control {
+        border: 0px;
+    }
+    .mid, .low, .pp {
+        height: 0%;
+        width: 0%;
+        font-size: 0%;
+    }
+    .hidden {
+        height: 10px;
+        font-size: 100%;
+        width: 90%;
+    }
+    .pusa {
+        height: 100px;
+        width: 100px;
+    }
+    .description {
+        top: 0px;
+        left: 18px;
+    }
+    .high {
+        right: 20px;
+    }
+    .fa-cog {
+        position: relative;
+        left: 20px;
+    }
+    .hidden2 {
+        position: relative;
+        height: 10px;
+        font-size: 100%;
+        top: 8px;
+        right: 20px;
+    }
+    .menu {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .spec1 {
+        max-width: 33%;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    h3 {
+        font-size: 1.1rem;
+    }
+    p {}
+}
