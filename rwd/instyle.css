@@ -12,6 +12,7 @@
     border-bottom-width: 1px;
     border-bottom-color: rgb(187, 187, 187);
     height: 80px;
+    width: 100%;
 }
 
 .icon {
@@ -32,7 +33,7 @@
 }
 
 .bottombar {
-    height: 1200px;
+    height: 200px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -43,8 +44,9 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    top: 50px;
-    width: 800px;
+    top: 35px;
+    width: 80%;
+    max-width: 700px;
     display: flex;
     justify-content: space-around;
     align-items: space-around;
@@ -58,6 +60,7 @@
 
 .description {
     position: relative;
+    left: 20px;
     top: 20px;
 }
 
@@ -95,7 +98,7 @@
 .story {
     width: 800px;
     position: relative;
-    top: 110px;
+    top: 68px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -114,6 +117,7 @@
     position: relative;
     top: 9px;
     left: 13px;
+    font-size: 12px;
 }
 
 .story2 {
@@ -129,6 +133,7 @@
     position: relative;
     top: 9px;
     left: 17px;
+    font-size: 12px;
 }
 
 .secondstory {
@@ -137,11 +142,11 @@
 }
 
 .bottomline {
-    left: 20px;
-    width: 900px;
+    width: 100%;
+    max-width: 900px;
     margin: 0 auto;
     position: relative;
-    top: 160px;
+    top: 80px;
     border-top-style: solid;
     border-top-width: 1px;
     border-top-color: rgb(187, 187, 187);
@@ -168,8 +173,12 @@
     flex-wrap: wrap;
     flex-direction: row;
     border-width: 1px;
-    width: 900px;
-    height: 300px;
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
+    max-height: 300px;
+    justify-content: center;
+    margin: 0 0;
 }
 
 .menu {
@@ -186,13 +195,94 @@
 }
 
 .spec1 {
-    width: 270px;
-    height: 270px;
+    max-width: 31%;
     position: relative;
-    margin-right: 15px;
-    margin-left: 15px;
+    margin-right: 8px;
+    margin-left: 8px;
     margin-top: 8px;
     border-style: solid;
     border-width: 1px;
     border-color: rgb(221, 221, 221);
+}
+
+.hidden {
+    position: relative;
+    top: 50px;
+    margin: 0 auto;
+    height: 0%;
+    font-size: 0%;
+}
+
+.hidden2 {
+    height: 0%;
+    font-size: 0%;
+}
+
+@media (max-width: 800px) {
+    .story, .story1, .story2, .text1, .text2 {
+        height: 0%;
+        font-size: 0%;
+        width: 0%;
+    }
+    .spec1 {
+        margin-right: 4px;
+        margin-left: 4px;
+        margin-top: 4px;
+    }
+}
+
+@media (max-width: 600px) {
+    .search, .mr-sm-2 {
+        height: 0%;
+        width: 0%;
+    }
+    .form-control {
+        border: 0px;
+    }
+    .mid, .low, .pp {
+        height: 0%;
+        width: 0%;
+        font-size: 0%;
+    }
+    .hidden {
+        height: 10px;
+        font-size: 100%;
+        width: 90%;
+    }
+    .pusa {
+        height: 100px;
+        width: 100px;
+    }
+    .description {
+        top: 0px;
+        left: 18px;
+    }
+    .high {
+        right: 20px;
+    }
+    .fa-cog {
+        position: relative;
+        left: 20px;
+    }
+    .hidden2 {
+        position: relative;
+        height: 10px;
+        font-size: 100%;
+        top: 8px;
+        right: 20px;
+    }
+    .menu {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .spec1 {
+        max-width: 33%;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    h3 {
+        font-size: 1.1rem;
+    }
+    p {}
 }
